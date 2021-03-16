@@ -25,7 +25,7 @@ public class Kennel {
                 return dog;
             }
         }
-        throw new IllegalStateException("There is no dog called: " + name);
+        throw new IllegalArgumentException("There is no dog called: " + name);
     }
 
     public void playWith(String name, int hours) {
