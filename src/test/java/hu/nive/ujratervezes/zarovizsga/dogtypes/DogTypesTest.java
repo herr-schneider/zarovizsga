@@ -42,6 +42,10 @@ public class DogTypesTest {
         assertEquals(9, types.size());
         assertTrue(types.contains("komondor"));
         assertTrue(types.contains("kuvasz"));
+
+        for (String dog : types){
+            System.out.println(dog);
+        }
     }
 
 }
