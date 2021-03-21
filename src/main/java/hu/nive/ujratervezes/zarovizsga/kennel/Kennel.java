@@ -29,11 +29,12 @@ public class Kennel {
     }
 
     public void playWith(String name, int hours) {
-        for (Dog dog : dogs) {
-            if (dog.getName().equals(name)) {
-                dog.play(hours);
-            }
-        }
+        findByName(name).play(hours);
+//        for (Dog dog : dogs) {
+//            if (dog.getName().equals(name)) {
+//                dog.play(hours);
+//            }
+//        }
     }
 
     public List<String> getHappyDogNames(int minHappiness) {

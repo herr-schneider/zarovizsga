@@ -12,7 +12,7 @@ public class DigitsCounter {
         Set<Character> temp = new HashSet<>();
         char[] chars = s.toCharArray();
         for (char c : chars) {
-            if (c > 47 && c < 58) {
+            if (c > 47 && c < 58) { // if (Character.isDigit(c))
                 temp.add(c);
             }
         }

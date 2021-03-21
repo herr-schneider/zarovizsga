@@ -10,6 +10,8 @@ class WorkHoursTest {
     void minWork() {
         WorkHours workHours = new WorkHours();
         String result = workHours.minWork("src/test/resources/hu/nive/ujratervezes/zarovizsga/workhours/workhours.txt");
+        String result2 = workHours.minWork2("src/test/resources/hu/nive/ujratervezes/zarovizsga/workhours/workhours.txt");
         assertEquals("John Doe: 2021-01-04", result);
+        assertEquals("John Doe: 2021-01-04", result2);
     }
 }

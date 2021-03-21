@@ -6,6 +6,7 @@ public class Worker {
     private String name;
     private int workedHours;
     private String workingDay;
+    private LocalDate workingDate;
 
     public Worker() {
     }
@@ -14,6 +15,12 @@ public class Worker {
         this.name = name;
         this.workedHours = workedHours;
         this.workingDay = workingDay;
+    }
+
+    public Worker(String name, int workedHours, LocalDate workingDate) {
+        this.name = name;
+        this.workedHours = workedHours;
+        this.workingDate = workingDate;
     }
 
     public String getName() {
@@ -26,6 +33,10 @@ public class Worker {
 
     public String getWorkingDay() {
         return workingDay;
+    }
+
+    public LocalDate getWorkingDate() {
+        return workingDate;
     }
 
     @Override
