@@ -5,8 +5,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class WorkHours {
     private List<Worker> workers = new ArrayList<>();
@@ -65,7 +67,23 @@ public class WorkHours {
                 workers.add(new Worker(name, workedHours, date));
             }
         } catch (IOException ioe) {
+            ioe.printStackTrace();
             throw new IllegalArgumentException("File not found", ioe);
+        }
+    }
+
+    private void initDBDate2(String file) {
+        Scanner scanner = new Scanner(System.in);
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        Path filename = Path.of(file);
+
+        try (BufferedReader bf = Files.newBufferedReader(filename)) {
+            String line;
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd");
+            String dateLine = bf.readLine();
+            LocalDate localDate_1 = LocalDate.parse(dateLine, formatter);
+        }catch (IOException ioe){
+            throw new IllegalStateException();
         }
     }
 }

@@ -47,5 +47,8 @@ public class DogTypesTest {
             System.out.println(dog);
         }
     }
-
+// return estates
+//        .stream()
+//        .map(Cleanable::getAddress)
+//        .collect(Collectors.joining(", "));
 }
